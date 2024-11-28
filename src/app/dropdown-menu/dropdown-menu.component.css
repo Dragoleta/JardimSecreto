@@ -1,0 +1,47 @@
+.dropdown-container {
+	background-color: var(--secondary-background-color);
+	width: 100%;
+}
+
+.dropdown-menu {
+	display: flex;
+	justify-content: space-evenly;
+	max-width: 600px;
+	margin: 0rem auto;
+}
+
+.dropdown-menu a {
+	display: block;
+	padding: 0.5em 0;
+	white-space: nowrap;
+	color: var(--secondary-text-color);
+	text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+	text-decoration: none;
+}
+
+.dropdown-menu a:focus {
+	outline: 2px dotted currentColor;
+	outline-offset: 3px;
+}
+
+.dropdown-menu li {
+	position: relative;
+	width: 2rem;
+}
+
+.dropdown-menu ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+
+.dropdown-menu li:hover > ul {
+	display: block;
+	background-color: var(--secondary-background-color);
+	width: 300%;
+	padding: 0.5em 0.5em;
+}

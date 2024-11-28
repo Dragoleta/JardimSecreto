@@ -1,0 +1,26 @@
+.hero {
+	background-color: var(--secondary-background-color);
+	color: var(--secondary-text-color);
+	margin: 0rem auto;
+	height: 500px;
+	width: fill;
+	/* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.fotocommunity.com%2Fsunset21000px-35b48943-5e98-4cb5-a1dd-20e314e44733.jpg%3Fheight%3D1080&f=1&nofb=1&ipt=30eb3925ae835e1013a73291779f7baf2abc7e4071130de9725808d4b4341b32&ipo=images"); */
+	display: flex;
+	flex-direction: row;
+}
+/*
+.hero-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-bet;
+	align-items: start;
+	padding: 1em;
+	position: absolute;
+	top: 100%;
+	left: 70%;
+} */
+
+.hero a > img {
+	width: 100%;
+	height: 200px;
+}
