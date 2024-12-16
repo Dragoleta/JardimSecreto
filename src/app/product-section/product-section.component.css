@@ -5,16 +5,23 @@
 }
 
 .section-wrapper h2 {
-	padding: 2rem 1rem;
+	padding: 1.5rem 1rem;
 }
 .section-wrapper h2::after {
 	content: "";
 }
 
 .product-wrapper {
-	display: flex;
-	overflow: auto;
-	flex: 1;
-	flex-wrap: wrap;
-	gap: 1rem;
+    gap: 3rem 3rem;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+    .product-wrapper {
+        grid-template-columns:  repeat(2, 1fr);
+    	gap: 3rem 2rem;
+    }
+
+
 }

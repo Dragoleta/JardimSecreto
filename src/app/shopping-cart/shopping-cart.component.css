@@ -53,8 +53,8 @@
 
 .cart-footer button {
 	width: 20rem;
-	height: 3.5rem;
+	height: 3rem;
 	margin: auto auto;
-	font-size: var(--fs-2);
+	font-size: var(--fs-1);
 	text-align: center;
 }

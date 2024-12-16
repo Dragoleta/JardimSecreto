@@ -35,6 +35,12 @@ ul li {
 	list-style: none;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
 /* CSS */
 button {
 	background-color: #ea4c89;
