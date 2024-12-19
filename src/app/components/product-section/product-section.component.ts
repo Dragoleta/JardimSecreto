@@ -1,7 +1,8 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
+import { ProductService } from "../../services/product/product.service";
 import { ItemCardComponent } from "../item-card/item-card.component";
-import { ShoppingItem, ShoppingItemClass } from "../item-card/shopping-item";
+import { ShoppingItem } from "../item-card/shopping-item";
 
 @Component({
 	selector: "app-product-section",
@@ -21,17 +22,9 @@ import { ShoppingItem, ShoppingItemClass } from "../item-card/shopping-item";
 	styleUrl: "./product-section.component.css",
 })
 export class ProductSectionComponent {
-	item: ShoppingItem = new ShoppingItemClass(
-		0,
-		"Teste",
-		"Muito sexo mesmo",
-		13,
-		"cosmetico",
-		1,
-		"https://avibrio.com.br/cdn/shop/files/Design_sem_nome_-_2024-08-29T164746.308.png?v=1724960941&width=493",
-		[],
-		5
-	);
+	productList: ShoppingItem[] = [];
 
-	productList: ShoppingItem[] = [this.item, this.item, this.item, this.item];
+	constructor(public productService: ProductService) {
+		this.productList = productService.getProductList();
+	}
 }

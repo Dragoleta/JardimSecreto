@@ -1,15 +1,17 @@
 import { Component, Input } from "@angular/core";
-import { ShoppingCartService } from "../shopping-cart.service";
+import { RouterModule } from "@angular/router";
+import { ShoppingCartService } from "../../services/shopping-cart/shopping-cart.service";
 import { ShoppingItem } from "./shopping-item";
 
 @Component({
 	selector: "app-item-card",
 	standalone: true,
-	imports: [],
+	imports: [RouterModule],
 	template: `
 		<div class="card-wrapper">
-			<a (click)="shoppingCartService.addItem(item!)">
-				<!-- TODO: Change from intead of (A) adding, redir to the details page -->
+			<!-- TODO: Change from intead of (A) adding, redir to the details page -->
+			<!-- <a (click)="shoppingCartService.addItem(item!)"> -->
+			<a [routerLink]="['/item', item.id]">
 				<img src="{{ item.imageUrl }}" alt="" />
 
 				<div class="card-info">
