@@ -21,7 +21,10 @@ import { ShoppingItem } from "../item-card/shopping-item";
 				</div>
 				<div class="item-info">
 					<div class="item-quantity">
-						<div class="arrow-icon" (click)="item?.removeOne()">
+						<div
+							class="arrow-icon"
+							(click)="shoppingCartService.removeOneItem(item!)"
+						>
 							<svg
 								fill="#ffffff"
 								height="30px"
@@ -53,7 +56,10 @@ import { ShoppingItem } from "../item-card/shopping-item";
 							</svg>
 						</div>
 						<h3>{{ item?.quantity }}</h3>
-						<div class="arrow-icon" (click)="item?.addOne()">
+						<div
+							class="arrow-icon"
+							(click)="shoppingCartService.addItem(item!)"
+						>
 							<svg
 								fill="#ffffff"
 								height="30px"

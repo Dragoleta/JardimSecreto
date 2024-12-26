@@ -1,4 +1,4 @@
-import { computed, Injectable, signal, WritableSignal } from "@angular/core";
+import { Injectable, signal, WritableSignal } from "@angular/core";
 import { ShoppingItem } from "../../components/item-card/shopping-item";
 
 @Injectable({
@@ -8,11 +8,7 @@ export class ShoppingCartService {
 	showCart = signal(false);
 	itemList: WritableSignal<ShoppingItem[]> = signal([]);
 
-	// TODO: Fix total checkoutPrice not updating
-	totalValue = computed(() => {
-		if (this.itemList().length === 0) return 0.0;
-		return this.itemList().reduce((sum, item) => sum + item.price, 0);
-	});
+	totalValue = signal(0);
 
 	constructor() {}
 
@@ -22,12 +18,23 @@ export class ShoppingCartService {
 				item.addOne();
 				return values;
 			}
+
 			return [...values, item];
 		});
+		this.totalValue.update((a) => a + item.price);
+	}
+
+	removeOneItem(item: ShoppingItem) {
+		if (1 >= item.quantity) {
+			return;
+		}
+		item.removeOne();
+		this.totalValue.update((a) => a - item.price);
 	}
 
 	removeItem(item: ShoppingItem) {
-		item.quantity = 0;
+		this.totalValue.update((a) => a - item.getTotal());
+		item.quantity = 1;
 		this.itemList.update((values) =>
 			values.filter((i) => i.id !== item.id)
 		);

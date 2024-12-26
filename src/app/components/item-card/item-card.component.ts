@@ -9,8 +9,6 @@ import { ShoppingItem } from "./shopping-item";
 	imports: [RouterModule],
 	template: `
 		<div class="card-wrapper">
-			<!-- TODO: Change from intead of (A) adding, redir to the details page -->
-			<!-- <a (click)="shoppingCartService.addItem(item!)"> -->
 			<a [routerLink]="['/item', item.id]">
 				<img src="{{ item.imageUrl }}" alt="" />
 
@@ -19,9 +17,6 @@ import { ShoppingItem } from "./shopping-item";
 						<h2>{{ item.name }}</h2>
 						<p>R$ {{ item.price }}</p>
 					</div>
-					<!-- <button (click)="shoppingCartService.addItem(item)">
-						Buy
-					</button> -->
 				</div>
 			</a>
 		</div>
