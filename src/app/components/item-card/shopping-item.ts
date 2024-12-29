@@ -3,11 +3,11 @@ export interface ShoppingItem {
 	name: string;
 	description: string;
 	price: number;
+	images: string[];
 
 	itemType: string;
 	quantity: number;
 	imageUrl: string;
-	images: string[];
 	rating: number;
 	addOne(): void;
 	removeOne(): void;

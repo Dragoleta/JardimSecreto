@@ -1,0 +1,39 @@
+.img-wrapper{
+    display: block;
+    width: max-content;
+}
+
+.img-wrapper img {
+    height: auto;
+    width:  clamp(300px, 50vw, 700px);
+}
+
+.button-wrapper {
+    display: inline-flex;
+    width: 100%;
+
+    justify-content: center;
+}
+
+.button-wrapper p {
+    align-content: center;
+}
+
+.button-wrapper button{
+    height: auto;
+    width: auto;
+
+    border-radius: 0rem;
+	border-style: none;
+	box-sizing: border-box;
+
+	background-color: transparent ;
+
+}
+
+@media (max-width: 750px) {
+    .img-wrapper img {
+      width:  clamp(320px, 80vw, 750px);
+    }
+
+}
