@@ -15,7 +15,7 @@ import { ShoppingItem } from "./shopping-item";
 				<div class="card-info">
 					<div class="item-info">
 						<h2>{{ item.name }}</h2>
-						<p>R$ {{ item.price }}</p>
+						<p>{{ item.price }} BRL</p>
 					</div>
 				</div>
 			</a>
