@@ -6,11 +6,7 @@ import { ProductSectionComponent } from "../../components/product-section/produc
 	selector: "app-homepage",
 	standalone: true,
 	imports: [CommonModule, ProductSectionComponent],
-	template: `
-		<app-product-section />
-		<app-product-section />
-		<app-product-section />
-	`,
+	template: ` <app-product-section /> `,
 	styleUrl: "./homepage.component.css",
 })
 export class HomepageComponent {}

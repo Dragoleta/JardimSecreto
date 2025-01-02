@@ -1,0 +1,40 @@
+.footer-wrapper {
+    background-color: var(--secondary-background-color);
+
+    display: block;
+
+    position: relative;
+    bottom: 0;
+
+    height: auto;
+    width: 100%;
+
+    margin-top: 2rem;
+
+}
+
+.wrapper {
+
+    height: 60%;
+    width: auto;
+
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 20dvw;
+
+    padding: 1rem 0 0 2rem;
+
+}
+
+.socials {
+    display: inline-flex;
+    justify-content: center;
+
+    gap: 1rem;
+
+    height: max-content;
+    width: 100%;
+
+    padding-top: 2rem;
+
+}

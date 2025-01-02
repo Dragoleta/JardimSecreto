@@ -35,10 +35,6 @@ O uso do Mini Vibrio simboliza uma mulher que é dona de sua sexualidade, que va
 		this.item,
 		this.item,
 		this.item,
-		this.item,
-		this.item,
-		this.item,
-		this.item,
 	];
 
 	constructor() {}

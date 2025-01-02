@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
+import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
 import { ShoppingCartService } from "./services/shopping-cart/shopping-cart.service";
@@ -13,6 +14,7 @@ import { ShoppingCartService } from "./services/shopping-cart/shopping-cart.serv
 		HeaderComponent,
 		CommonModule,
 		ShoppingCartComponent,
+		FooterComponent,
 	],
 	providers: [ShoppingCartService],
 	template: `
@@ -21,6 +23,7 @@ import { ShoppingCartService } from "./services/shopping-cart/shopping-cart.serv
 			<section class="content">
 				<router-outlet />
 			</section>
+			<app-footer />
 			<div *ngIf="shoppingCartService.showCart()">
 				<app-shopping-cart />
 			</div>
